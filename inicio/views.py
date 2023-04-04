@@ -2,6 +2,7 @@ from datetime import datetime
 from django.http import HttpResponse
 from django.template import Template, Context, loader
 from inicio.models import Animal
+from django.shortcuts import render
 
 def mi_vista(request):
     return HttpResponse('<h1>Mi primera vista</h1>')
@@ -74,3 +75,7 @@ def crear_animal(request):
     template = loader.get_template(r'crear_animal.html')
     template_renderizado = template.render(datos)
     return HttpResponse(template_renderizado)
+
+def prueba_render(request):
+    datos = {'nombre': 'Pepe'}
+    return render(request, r'prueba_render.html', datos)
