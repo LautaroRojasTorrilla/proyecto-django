@@ -23,12 +23,13 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'inicio:inicio' %}">Inicio</a>
-                <a class="navbar-brand" href={% url 'inicio:mostrar_fecha' %}>Mostrar Fecha</a>
+                {% comment %} <a class="navbar-brand" href={% url 'inicio:mostrar_fecha' %}>Mostrar Fecha</a> {% endcomment %}
                 {% comment %} <a class="navbar-brand" href={% url 'inicio:saludar' %}>Saludar</a> {% endcomment %}
-                <a class="navbar-brand" href={% url 'inicio:mi_primer_template' %}>Mi Primer Template</a>
-                <a class="navbar-brand" href={% url 'inicio:prueba_template' %}>Prueba Template</a>
+                {% comment %} <a class="navbar-brand" href={% url 'inicio:mi_primer_template' %}>Mi Primer Template</a> {% endcomment %}
+                {% comment %} <a class="navbar-brand" href={% url 'inicio:prueba_template' %}>Prueba Template</a> {% endcomment %}
                 <a class="navbar-brand" href={% url 'inicio:crear_animal' %}>Crear Animal</a>
-                <a class="navbar-brand" href={% url 'inicio:prueba_render' %}>Prueba Render</a>
+                <a class="navbar-brand" href={% url 'inicio:listar_animales' %}>Animales</a>
+                {% comment %} <a class="navbar-brand" href={% url 'inicio:prueba_render' %}>Prueba Render</a> {% endcomment %}
                 {% comment %} <a class="btn btn-primary" href="#signup">Sign Up</a> {% endcomment %}
             </div>
         </nav>

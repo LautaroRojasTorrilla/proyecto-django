@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+<title>Animales</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+<h1>Listado de Animales</h1>
+{% endblock h1_header %}
+
+{% block contenido %}
+<p>
+    <form action={% url 'inicio:listar_animales' %} method="get">
+        {{formulario}}
+        <button>Buscar</button>
+    </form>
+</p>
+{% if animales %}
+    {% for animal in animales %}
+    <li>
+        Nombre: {{animal.nombre}} - Edad: {{animal.edad}}
+    </li>
+    {% endfor %}
+{% else %}
+    <h2>No hay datos ingresados.</h2>
+{% endif %}
+{% endblock contenido %}

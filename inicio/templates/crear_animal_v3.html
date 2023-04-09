@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+<title>Crear Animal</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+<h1>Crear Animal</h1>
+{% endblock h1_header %}
+
+{% block contenido %}
+<form action={% url 'inicio:crear_animal' %} method="POST">
+    {% comment %} dependiendo de lo que se le ponga al input va a laburar con distintas cosas {% endcomment %}
+    {% csrf_token %}
+    <table>
+        {{formulario}}
+    </table>
+    <button>Crear</button>
+    {% comment %} Nombre: {{animal.nombre}} - Edad: {{animal.edad}} {% endcomment %}
+</form>
+{% endblock contenido %}
